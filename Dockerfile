@@ -67,3 +67,6 @@ RUN wget http://www.ijg.org/files/jpegsrc.v8d.tar.gz \
     && ln -s /usr/local/lib/libjpeg.so.8 /usr/lib/x86_64-linux-gnu/libjpeg.so.8 \
     && mkdir -p /usr/local/lib/webkit2gtk-4.0/injected-bundle \
     && ln -s /usr/lib/x86_64-linux-gnu/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.so /usr/local/lib/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.so
+
+RUN mkdir -p /example/screenshots
+COPY example/*.json example/*.js /example/
