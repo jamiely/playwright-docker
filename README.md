@@ -25,7 +25,7 @@ you could run the image like:
 ```
 docker run -it --rm \
   -v $(pwd)/screenshots:/example/screenshots \
-  playwright-docker bash
+  jamiely/playwright:0.11.1 bash
 ```
 
 Then open the screenshot files from the `screenshots` directory inside
