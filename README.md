@@ -23,9 +23,17 @@ If you want to view the screenshots on your container host machine,
 you could run the image like:
 
 ```
-docker run -it --rm \
+% docker run -it --rm \
   -v $(pwd)/screenshots:/example/screenshots \
   jamiely/playwright:0.11.1 bash
+```
+
+Then, inside the container, run the example provided
+
+```bash
+cd /example
+npm install
+node test.js
 ```
 
 Then open the screenshot files from the `screenshots` directory inside
