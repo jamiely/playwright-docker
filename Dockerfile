@@ -68,5 +68,10 @@ RUN wget http://www.ijg.org/files/jpegsrc.v8d.tar.gz \
     && mkdir -p /usr/local/lib/webkit2gtk-4.0/injected-bundle \
     && ln -s /usr/lib/x86_64-linux-gnu/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.so /usr/local/lib/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.so
 
+# Now clean up
+RUN rm -rf /var/lib/apt/lists/* \
+    && rm -rf jpeg-8d
+
 RUN mkdir -p /example/screenshots
-COPY example/*.json example/*.js /example/
+
+COPY example/*.json example/*.js example/*.sh /example/

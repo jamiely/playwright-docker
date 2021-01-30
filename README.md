@@ -32,8 +32,7 @@ Then, inside the container, run the example provided
 
 ```bash
 cd /example
-npm install
-node test.js
+npm run example
 ```
 
 Then open the screenshot files from the `screenshots` directory inside
